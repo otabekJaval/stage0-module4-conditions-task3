@@ -1,16 +1,19 @@
 package school.mjc.stage0.conditions.task3;
 
-import java.util.Calendar;
+public class SalaryCalculator {
 
-public class IsEnglishSymbolDeterminer {
-    public static void main(String[] args) {
+    public void calculateSalary(int salary) {
 
-    }
-    public void isEnglishSymbol(char symbol) {
-        if (Character.isAlphabetic(symbol)&&symbol!='Ł'&&symbol!='ł') {
-            System.out.println("English");
-        }else{
-            System.out.println("Non English");
+
+        if (salary<0){
+            System.out.println("wrong input!");
+        }else if (salary <= 10000) {
+            System.out.println((float) salary - salary / 100 * 15);
+        } else if (salary <= 20000) {
+            System.out.println((float) salary - salary / 100 * 18);
+        } else if (salary > 20000) {
+            System.out.println((float) salary - salary / 100 * 20);
         }
     }
 }
+
